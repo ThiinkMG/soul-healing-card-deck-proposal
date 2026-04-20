@@ -784,10 +784,12 @@
   footer {
     position: relative;
     text-align: center;
-    padding: 64px 40px 120px;
+    padding: 80px 40px;
     overflow: hidden;
-    margin-top: 40px;
+    margin-top: 60px;
+    color: var(--white); /* Ensures text is white on the dark background */
   }
+ /* 1. The Image Layer: Adjust 'opacity' to make the image stronger or weaker */
   footer::before {
     content: '';
     position: absolute;
@@ -795,17 +797,22 @@
     background-image: url('https://i.imgur.com/OOM5IRz.jpeg');
     background-size: cover;
     background-position: center;
-    opacity: 0.5;
+    opacity: 0.25; /* Lower = more subtle image, Higher = clearer image */
     z-index: 0;
   }
+ /* 2. The Color Overlay: Adjust the 'rgba' alpha (the 0.9) for darkness */
   footer::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(238,234,227,0.75) 0%, rgba(238,234,227,0.4) 100%);
+    background: linear-gradient(to bottom, 
+                rgba(7, 50, 103, 0.95) 0%,   /* Solid Navy at top */
+                rgba(7, 50, 103, 0.80) 100%); /* Slightly lighter at bottom */
     z-index: 1;
   }
+
   footer > * { position: relative; z-index: 2; }
+
   footer .footer-logo {
     display: inline-block;
     padding: 14px 20px;
@@ -822,7 +829,7 @@
   }
   footer p {
     font-size: 13px;
-    color: var(--ink-mid);
+    color: white;
     max-width: 400px;
     margin: 0 auto 6px;
     text-align: center;
@@ -1360,27 +1367,20 @@
 </section>
 
 <hr class="rule" />
-
-<footer>
+<footer id="footer">
   <div class="footer-logo">
     <img src="https://i.imgur.com/TzeZfYs.png" alt="Thiink Media Graphics" />
   </div>
   <p>Thiink Media Graphics, LLC &mdash; Atlanta, GA</p>
   <p>Ancient Wisdom &middot; Modern Innovation</p>
-  <div class="footer-contact">thiinkmediagraphics.com</div>
-  <p style="margin-top:28px; font-size:11px; color:rgba(74,79,86,0.55);">This proposal is confidential and prepared exclusively for Natasha Daniels / Soul Healing. All concepts, architecture, and strategies contained herein are the intellectual property of Thiink Media Graphics, LLC &mdash; 2026.</p>
-</footer>
-
-<hr class="rule" />
-
-<footer>
-  <div class="footer-logo">
-    <img src="https://i.imgur.com/TzeZfYs.png" alt="Thiink Media Graphics" />
+  
+  <div class="footer-contact">
+    <a href="https://thiinkmediagraphics.com" target="_blank" style="text-decoration: none; color: var(--gold-light); font-weight: 600;">
+      thiinkmediagraphics.com
+    </a>
   </div>
-  <p>Thiink Media Graphics, LLC &mdash; Atlanta, GA</p>
-  <p>Ancient Wisdom &middot; Modern Innovation</p>
-  <div class="footer-contact">thiinkmediagraphics.com</div>
-  <p style="margin-top:28px; font-size:11px; color:rgba(74,79,86,0.55);">
+
+  <p style="margin-top:28px; font-size:11px; color: rgba(255,255,255,0.6); max-width: 600px; margin-left: auto; margin-right: auto;">
     This proposal is confidential and prepared exclusively for Natasha Daniels / Soul Healing. 
     All concepts, architecture, and strategies contained herein are the intellectual property 
     of Thiink Media Graphics, LLC &mdash; 2026.

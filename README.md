@@ -24,6 +24,8 @@ A premium, visual pitch proposal designed for **Soul Healing**. This repository 
 
 The goal is to bridge the gap between static PDFs and physical inventory by providing a **zero-overhead, high-perceived-value** digital experience.
 
+[View Live Proposal](https://thiinkmg.github.io/soul-healing-card-deck-proposal/)
+
 ---
 
 ## 3D Visual Experience
